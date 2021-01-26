@@ -30,9 +30,48 @@
           <h2>Broadway, Chennai</h2>
         </div>
         <figure class="leader">
-          <img src="./images/db.jpg" alt="Don Bosco" title="Don Bosco" />
+          <img src="./images/db.png" alt="Don Bosco" title="Don Bosco" />
         </figure>
       </header>
+      <div class="dist-menu d-flex">
+        <div class="left-sub">
+          <a href="javascript:void(0)" class="btn">Home</a>
+        </div>
+
+        <!-- Swiper -->
+        <div class="right-date">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="d-flex">
+                  <figure class="cal-vector">
+                    <img
+                      src="./images/calendar.svg"
+                      alt="calendar"
+                      title="calendar"
+                    />
+                  </figure>
+                  <span class="text">Christmas Celebration</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="d-flex">
+                  <figure class="cal-vector">
+                    <img
+                      src="./images/calendar.svg"
+                      alt="calendar"
+                      title="calendar"
+                    />
+                  </figure>
+                  <span class="text">All Groups Meeting</span>
+                </div>
+              </div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <section class="d-flex infos">
         <div class="overall-tabs">
           <ul class="tabs-sec">
@@ -40,7 +79,7 @@
             <li class="active" data-id="announcement">
               <img src="./images/user.svg" alt="user" />
             </li>
-            <li data-id="setting">
+            <li data-id="service">
               <img src="./images/setting.svg" alt="setting" />
             </li>
             <li data-id="gallery">
@@ -92,8 +131,8 @@
               assumenda obcaecati ad expedita. Nesciunt.
             </p>
           </div>
-          <div class="setting tab-content" data-id="setting">
-            <h3>Setting</h3>
+          <div class="service tab-content" data-id="service">
+            <h3>service</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
               explicabo, repellat debitis nihil vel fuga pariatur sed maiores
@@ -102,13 +141,58 @@
             </p>
           </div>
           <div class="gallery tab-content" data-id="gallery">
-            <h3>Gallery</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-              explicabo, repellat debitis nihil vel fuga pariatur sed maiores
-              quibusdam minima cumque soluta doloremque, quia, molestiae
-              assumenda obcaecati ad expedita. Nesciunt.
-            </p>
+            <div class="d-flex wrap group">
+              <div class="sec-gallery outer" data-id="programes">
+                <img src="https://dummyimage.com/250/ffffff/000000" alt="" />
+                <h4>Programes</h4>
+              </div>
+              <div class="sec-gallery outer" data-id="intern">
+                <img src="https://dummyimage.com/250/ffffff/000000" alt="" />
+                <h4>Intern</h4>
+              </div>
+            </div>
+            <div class="inner-gallery">
+              <div class="programes inner-pics" data-id="programes">
+                <a href="javascript:void(0)" class="back" data-id="programes"
+                  >Back</a
+                >
+                <h3>Programes</h3>
+                <div class="d-flex wrap">
+                  <div class="sec-gallery">
+                    <img
+                      src="https://dummyimage.com/250/ffffff/000000"
+                      alt=""
+                    />
+                  </div>
+                  <div class="sec-gallery">
+                    <img
+                      src="https://dummyimage.com/250/ffffff/000000"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="intern inner-pics" data-id="intern">
+                <a href="javascript:void(0)" class="back" data-id="intern"
+                  >Back</a
+                >
+                <h3>Intern</h3>
+                <div class="d-flex wrap group">
+                  <div class="sec-gallery">
+                    <img
+                      src="https://dummyimage.com/250/ffffff/000000"
+                      alt=""
+                    />
+                  </div>
+                  <div class="sec-gallery">
+                    <img
+                      src="https://dummyimage.com/250/ffffff/000000"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="contact tab-content" data-id="contact">
             <h3>Contact</h3>
@@ -121,31 +205,33 @@
           </div>
         </div>
       </section>
-      <footer class="d-flex">
-        <div class="social-links">
-          <h6>Follow us:</h6>
-          <ul class="d-flex">
-            <li>
-              <a href="javascript:void(0)" target="_blank">
-                <img src="./images/fb.svg" alt="facebook" title="facebook" />
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)" target="_blank">
-                <img
-                  src="./images/instagram.svg"
-                  alt="instagram"
-                  title="instagram"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="quote">
-          <h3>"One for all, All for one"</h3>
-        </div>
-      </footer>
     </div>
+    <footer class="d-flex">
+      <div class="quote">
+        <h3>"One for all, All for one"</h3>
+      </div>
+      <div class="social-links">
+        <ul class="d-flex">
+          <li>
+            <a
+              href="https://www.facebook.com/dbycbroadwaychennai"
+              target="_blank"
+            >
+              <img src="./images/fb.svg" alt="facebook" title="facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" target="_blank">
+              <img
+                src="./images/instagram.svg"
+                alt="instagram"
+                title="instagram"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
   </body>

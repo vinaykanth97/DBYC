@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Edwardian Script";
+  src: url("../fonts/EdwardianScriptITC.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +12,10 @@ body {
   font-size: 14px;
   line-height: 1.3;
   color: #000000;
-  background: url(../images/bg-image.JPG) no-repeat;
+  background: url(../images/bg-2.jpg) no-repeat;
   background-size: cover;
   background-color: #ffffff;
+  background-position: 0%;
 }
 img {
   max-width: 100%;
@@ -31,18 +36,23 @@ li {
 h1 {
   font-size: 50px;
   color: #1c8dff;
+  text-transform: uppercase;
 }
 h2 {
   font-size: 40px;
   font-weight: 300;
 }
 p {
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 header {
   padding: 20px 0;
   align-items: center;
   justify-content: space-between;
+}
+a {
+  text-decoration: none;
 }
 header .logo img {
   width: 150px;
@@ -76,8 +86,9 @@ header .leader img {
   width: 50%;
   padding: 10px;
   background: #ffffff;
-  border: 1px solid rgb(27, 27, 27);
   border-radius: 10px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.12), 0 2px 6px 0 rgba(0, 0, 0, 0.08),
+    0 0 1px 0 rgba(0, 0, 0, 0.12);
   margin: 0 30px 0 0;
 }
 .infos .carousel {
@@ -100,6 +111,8 @@ header .leader img {
   align-items: center;
   cursor: pointer;
   margin: 0 0 10px 0;
+
+  opacity: 0.5;
 }
 .arrow {
   position: absolute;
@@ -113,6 +126,15 @@ header .leader img {
 }
 .right-section {
   width: 90%;
+}
+.home,
+.service,
+.contact {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.12), 0 2px 6px 0 rgba(0, 0, 0, 0.08),
+    0 0 1px 0 rgba(0, 0, 0, 0.12);
 }
 .infos li img {
   pointer-events: none;
@@ -133,11 +155,13 @@ header .leader img {
   display: none;
 }
 .tabs-sec li.active {
-  pointer-events: none;
+  opacity: 1;
 }
 footer {
-  padding: 20px 0;
   align-items: center;
+  margin-top: 80px;
+  background: #fff;
+  padding: 20px 30px;
 }
 .social-links img {
   width: 30px;
@@ -147,22 +171,56 @@ footer {
 }
 .quote {
   flex: 1;
+  text-align: left;
+}
+
+.social-links h6 {
+  font-size: 18px;
+  margin-bottom: 10px;
   text-align: right;
 }
-.social-links h6 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.social-links .d-flex {
+  justify-content: flex-end;
 }
 .social-links li {
   margin: 0 20px 0 0;
 }
+.social-links li:last-child {
+  margin: 0;
+}
 .quote h3 {
-  font-size: 40px;
+  font-family: "Edwardian Script";
+  font-size: 70px;
+  color: #1c8dff;
+  font-weight: 300;
+  line-height: 1;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.sec-gallery {
+  padding: 20px;
+  width: calc(100% / 4);
+  cursor: pointer;
+}
+.sec-gallery:first-child {
+  padding-left: 0;
+}
+.sec-gallery:last-of-type {
+  padding-right: 0;
+}
+.sec-gallery h4 {
+  font-size: 22px;
+  margin-top: 5px;
 }
 .swiper-button-prev-unique,
 .swiper-button-next-unique {
   top: auto;
-  bottom: -25%;
+  bottom: -20%;
+  border: 1px solid #1c8dff;
+  padding: 21px;
+  border-radius: 50%;
+  background: #1c8dff;
 }
 .swiper-button-prev-unique:focus,
 .swiper-button-next-unique:focus {
@@ -180,6 +238,52 @@ footer {
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  color: #000;
-  font-size: 32px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.dist-menu {
+  align-items: center;
+}
+.dist-menu .left-sub {
+  width: auto;
+}
+.right-date {
+  width: 90%;
+}
+.right-date img {
+  width: 100%;
+}
+.right-date .d-flex {
+  align-items: center;
+}
+.cal-vector {
+  width: 5%;
+}
+.text {
+  width: 100%;
+}
+.right-date figure {
+  margin: 0 12px 0 0;
+}
+.btn {
+  color: #ffffff;
+  background-color: #1c8dff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  display: inline-block;
+  width: auto;
+  text-transform: capitalize;
+}
+.right-date .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.inner-gallery .inner-pics {
+  display: none;
+}
+.inner-pics {
+  animation: show 1s ease forwards;
 }
