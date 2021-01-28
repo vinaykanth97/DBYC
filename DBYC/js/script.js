@@ -80,6 +80,7 @@ backBtn.forEach((back, index) => {
     let getData = this.getAttribute("data-id");
     let outerGallery = document.querySelector(`.outer[data-id="${getData}"]`);
     outerGallery.parentElement.style.display = "flex";
+    outerGallery.parentElement.classList.add("show-anim");
     document.querySelector(
       `.inner-gallery .inner-pics[data-id="${getData}"]`
     ).style.display = "none";
