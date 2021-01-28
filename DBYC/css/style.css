@@ -54,10 +54,7 @@ header {
 a {
   text-decoration: none;
 }
-header .logo img {
-  width: 150px;
-  height: 150px;
-}
+
 header .logo {
   flex-basis: auto;
 }
@@ -138,6 +135,9 @@ header .leader img {
 }
 .infos li img {
   pointer-events: none;
+}
+.show-anim {
+  animation: show 1s ease forwards;
 }
 .right-section .active {
   display: block !important;
@@ -286,4 +286,96 @@ footer {
 }
 .inner-pics {
   animation: show 1s ease forwards;
+}
+.back {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+@media (max-width: 991px) {
+  .container {
+    max-width: 100%;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  .dist-menu {
+    flex-direction: column;
+  }
+  .dist-menu .left-sub {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .right-date {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .infos {
+    flex-direction: column;
+  }
+  .infos .overall-tabs {
+    margin: 0;
+  }
+  .tabs-sec {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 50px 0;
+  }
+  .right-section {
+    width: 100%;
+  }
+  .arrow {
+    display: none;
+  }
+  .quote {
+    flex-basis: 80%;
+  }
+  footer {
+    padding: 20px;
+  }
+  .swiper-button-prev-unique,
+  .swiper-button-next-unique {
+    bottom: -35%;
+  }
+  header .leader,
+  header .logo {
+    flex-basis: 20%;
+  }
+  header .center-headline {
+    flex-basis: 60%;
+    margin: 0 15px;
+  }
+  .announcement {
+    flex-direction: column;
+  }
+  .infos .inner-content {
+    width: auto;
+    margin: 0 0 20px 0;
+  }
+  .infos .carousel {
+    width: auto;
+  }
+  .sec-gallery {
+    width: calc(100% / 2);
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .quote {
+    margin: 0 0 20px 0;
+  }
+  .quote h3 {
+    text-align: center;
+  }
+  .cal-vector {
+    width: 10%;
+  }
+  .text {
+    width: 90%;
+  }
 }
