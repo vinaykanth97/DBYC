@@ -25,6 +25,7 @@ var autoSwiper = new Swiper(".right-date .swiper-container", {
     disableOnInteraction: false,
   },
 });
+
 // Tabs
 let activeTabPos =
   document.querySelector(".overall-tabs li.active").offsetTop + 18;
@@ -85,4 +86,22 @@ backBtn.forEach((back, index) => {
       `.inner-gallery .inner-pics[data-id="${getData}"]`
     ).style.display = "none";
   });
+});
+
+// Gallery Popup
+let popup = document.querySelector(".popup");
+let innerPics = document.querySelectorAll(".inner-pics .sec-gallery img");
+innerPics.forEach((pics) => {
+  pics.addEventListener("click", function (e) {
+    $(".overlay").fadeIn();
+    $(".popup-container").fadeIn();
+    popup.innerHTML = `<img src =${this.src}> `;
+    document.body.style.overflow = "hidden";
+  });
+});
+
+$(".close").click(function () {
+  $(".popup-container").fadeOut();
+  $(".overlay").fadeOut();
+  document.body.style.overflow = "";
 });
