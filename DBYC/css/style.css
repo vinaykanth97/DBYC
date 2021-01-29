@@ -2,6 +2,8 @@
   font-family: "Edwardian Script";
   src: url("../fonts/EdwardianScriptITC.ttf") format("truetype");
 }
+@import url("http://fonts.cdnfonts.com/css/walkway");
+
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +43,7 @@ h1 {
 h2 {
   font-size: 40px;
   font-weight: 300;
+  font-family: "Walkway Black", sans-serif;
 }
 p {
   font-size: 16px;
@@ -210,8 +213,9 @@ footer {
   padding-right: 0;
 }
 .sec-gallery h4 {
-  font-size: 22px;
+  font-size: 20px;
   margin-top: 5px;
+  color: #1c8dff;
 }
 .swiper-button-prev-unique,
 .swiper-button-next-unique {
@@ -246,10 +250,12 @@ footer {
   align-items: center;
 }
 .dist-menu .left-sub {
-  width: auto;
+  width: 15%;
 }
 .right-date {
-  width: 90%;
+  width: 85%;
+  z-index: -1;
+  position: relative;
 }
 .right-date img {
   width: 100%;
@@ -290,6 +296,47 @@ footer {
 .back {
   margin-bottom: 20px;
   display: inline-block;
+}
+.inner-gallery h3 {
+  color: #1c8dff;
+}
+.overlay {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 9999;
+}
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 20px;
+  display: none;
+  background: #ffffff;
+  z-index: 9999;
+}
+.close-par {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+.close-par img {
+  width: 70%;
+  cursor: pointer;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  padding: 10px;
+}
+.copyright {
+  text-align: center;
+  background: #fff;
+  padding: 0 30px 20px 30px;
 }
 @media (max-width: 991px) {
   .container {
@@ -336,6 +383,7 @@ footer {
   }
   footer {
     padding: 20px;
+    background-color: transparent;
   }
   .swiper-button-prev-unique,
   .swiper-button-next-unique {
@@ -368,14 +416,24 @@ footer {
   }
   .quote {
     margin: 0 0 20px 0;
+    width: auto;
   }
+
   .quote h3 {
-    text-align: center;
+    text-align: left;
+    font-size: 46px;
+    color: #d65050;
   }
   .cal-vector {
     width: 10%;
   }
   .text {
     width: 90%;
+  }
+  .popup-container {
+    width: 90%;
+  }
+  .copyright {
+    background: transparent;
   }
 }
